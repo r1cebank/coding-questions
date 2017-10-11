@@ -7,10 +7,12 @@ function mergeArray(array1, array2) {
     while (arrayIndex1 < array1.length || arrayIndex2 < array2.length) {
         if (!array1[arrayIndex1]) {
             finalArray.push(array2[arrayIndex2++]);
+            continue;
         }
         if (!array2[arrayIndex2]) {
             finalArray.push(array1[arrayIndex1++]);
-        }
+            continue;
+        }    
         if (array1[arrayIndex1] <= array2[arrayIndex2]) {
             finalArray.push(array1[arrayIndex1++]);
         } else if (array1[arrayIndex1] > array2[arrayIndex2]) {
