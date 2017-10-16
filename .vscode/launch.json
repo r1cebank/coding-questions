@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/largestSubBST"
+            "program": "${workspaceRoot}/queue2Stack"
         }
         ]
     }
