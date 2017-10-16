@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/queue2Stack"
+            "program": "${workspaceRoot}/stack2Queue"
         }
         ]
     }
