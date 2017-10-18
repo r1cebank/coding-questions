@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/stack2Queue"
+            "program": "${workspaceRoot}/quickSort"
         }
         ]
     }
