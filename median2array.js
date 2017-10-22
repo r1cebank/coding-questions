@@ -1,4 +1,4 @@
-function mergeArray(array1, array2) {
+var findMedianSortedArrays = function(array1, array2) {
     const length = array1.length > array2.length ? array1.length : array2.length;
     const finalArray = [];
     let arrayIndex1 = 0;
@@ -19,12 +19,11 @@ function mergeArray(array1, array2) {
             finalArray.push(array2[arrayIndex2++]);
         }
     }
-    return finalArray;
-}
+    if (finalArray.length % 2 === 1) {
+        return finalArray[parseInt(finalArray.length / 2)];
+    } else {
+        return (finalArray[parseInt(finalArray.length / 2)] + finalArray[parseInt(finalArray.length / 2) - 1]) / 2;
+    }
+};
 
-module.exports = mergeArray;
-
-const arr1 = [1, 2, 3, 4];
-const arr2 = [3, 7, 10, 11];
-
-console.log(mergeArray(arr1, arr2));
+console.log(findMedianSortedArrays([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22], [0,6]));

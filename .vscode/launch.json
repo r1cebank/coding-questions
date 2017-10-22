@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/turningNumber"
+            "program": "${workspaceRoot}/median2array.js"
         }
         ]
     }
