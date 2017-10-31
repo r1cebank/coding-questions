@@ -41,4 +41,4 @@ var intToRoman = function(num) {
     return answer;
 };
 
-console.log(intToRoman(40));
+console.log(intToRoman(400));
