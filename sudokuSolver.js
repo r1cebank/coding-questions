@@ -2,6 +2,9 @@
  * @param {character[][]} board
  * @return {void} Do not return anything, modify board in-place instead.
  */
+
+let compares = 0;
+
 var solveSudoku = function(board) {
     const emptyCoord = findHole(board);
     if (emptyCoord[0] === -1) {
@@ -9,6 +12,7 @@ var solveSudoku = function(board) {
     }
     for (let num = 1; num <= 9; num++) {
         if (isSafe(board, emptyCoord[0], emptyCoord[1], num + '')) {
+            compares++;
             board[emptyCoord[0]][emptyCoord[1]] = num + '';
             if (solveSudoku(board)) {
                 return true;
@@ -79,4 +83,4 @@ const board = [
 
 solveSudoku(board);
 
-console.log(board);
+console.log(board, compares);
