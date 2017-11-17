@@ -28,4 +28,4 @@ var permute = function(nums) {
     return ans;
 };
 
-console.log(permute([1, 2, 3, 4]));
+console.log(permute([1, 1, 2]));
