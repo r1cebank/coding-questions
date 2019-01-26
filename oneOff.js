@@ -17,7 +17,7 @@ function oneOff(s1, s2) {
                 } else {
                     index++;
                 }
-                found++;
+                found = true;
             }
         }
     }
