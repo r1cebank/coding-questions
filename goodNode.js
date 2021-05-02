@@ -1,0 +1,31 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+
+
+var goodNodes = function (root) {
+    let numGoodNodes = 0;
+    var countGoodNodes = function (root, prevMax) {
+        if (!root) {
+            return;
+        }
+        let currentMax = prevMax;
+        if (root.val >= currentMax) {
+            numGoodNodes++;
+            currentMax = root.val;
+        }
+        countGoodNodes(root.left, currentMax);
+        countGoodNodes(root.right, currentMax);
+    }
+    countGoodNodes(root, Number.MIN_SAFE_INTEGER);
+    return numGoodNodes;
+};
