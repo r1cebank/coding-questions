@@ -27,3 +27,26 @@ const numbers = [1, 2, 0];
 
 
 console.log(firstMissing(numbers));
+
+
+/**
+ * @pnumsrnumsm {number[]} nums
+ * @return {number}
+ */
+var firstMissingPositive = function (nums) {
+    const indexMap = [];
+    let foundIndex = -1;
+    nums.forEach((n) => {
+        if (n >= 0) {
+            indexMap[n] = true
+        }
+    });
+    console.log(indexMap);
+    for (let i = 0; i < indexMap.length; i++) {
+        if (!indexMap[i] && i) {
+            foundIndex = i;
+            break;
+        }
+    }
+    return foundIndex >= 0 ? foundIndex : indexMap.length ? indexMap.length : 1;
+};
